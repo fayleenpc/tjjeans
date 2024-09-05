@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"net/smtp"
 
-	"github.com/fayleenpc/ecom/config"
+	"github.com/fayleenpc/tjjeans/config"
 )
 
 const (

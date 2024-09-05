@@ -3,7 +3,7 @@ package landing
 import (
 	"net/http"
 
-	"github.com/fayleenpc/ecom/views"
+	"github.com/fayleenpc/tjjeans/views"
 	"github.com/gorilla/mux"
 )
 

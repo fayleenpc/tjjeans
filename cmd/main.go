@@ -4,9 +4,9 @@ import (
 	"database/sql"
 	"log"
 
-	"github.com/fayleenpc/ecom/cmd/api"
-	"github.com/fayleenpc/ecom/config"
-	"github.com/fayleenpc/ecom/db"
+	"github.com/fayleenpc/tjjeans/cmd/api"
+	"github.com/fayleenpc/tjjeans/config"
+	"github.com/fayleenpc/tjjeans/db"
 	"github.com/go-sql-driver/mysql"
 )
 

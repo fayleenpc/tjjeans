@@ -3,9 +3,9 @@ package products
 import (
 	"net/http"
 
-	"github.com/fayleenpc/ecom/service/auth"
-	"github.com/fayleenpc/ecom/types"
-	"github.com/fayleenpc/ecom/utils"
+	"github.com/fayleenpc/tjjeans/service/auth"
+	"github.com/fayleenpc/tjjeans/types"
+	"github.com/fayleenpc/tjjeans/utils"
 	"github.com/gorilla/mux"
 )
 

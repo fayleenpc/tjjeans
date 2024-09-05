@@ -1,4 +1,4 @@
-module github.com/fayleenpc/ecom
+module github.com/fayleenpc/tjjeans
 
 go 1.22.5
 

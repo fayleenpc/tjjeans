@@ -8,9 +8,9 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/fayleenpc/ecom/config"
-	"github.com/fayleenpc/ecom/types"
-	"github.com/fayleenpc/ecom/utils"
+	"github.com/fayleenpc/tjjeans/config"
+	"github.com/fayleenpc/tjjeans/types"
+	"github.com/fayleenpc/tjjeans/utils"
 	"github.com/golang-jwt/jwt/v5"
 )
 

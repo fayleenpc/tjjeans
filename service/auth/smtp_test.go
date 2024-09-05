@@ -3,7 +3,7 @@ package auth
 import (
 	"testing"
 
-	"github.com/fayleenpc/ecom/config"
+	"github.com/fayleenpc/tjjeans/config"
 )
 
 func TestGenerateToken(t *testing.T) {
