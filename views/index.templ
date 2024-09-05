@@ -1,0 +1,357 @@
+package views
+
+templ Index() {
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" type="image/x-icon" href="/static/images/TJJeans.ico">
+    <title>TJ Jeans</title>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-logo">
+            <p>TJ Jeans</p>
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="#" class="link active" id="beranda" onclick="ToggleLanding()">Beranda</a></li>
+                <li><a href="#" class="link" onclick="ToggleProducts()" id="produk">Produk</a></li>
+                <li><a href="#" class="link" id="tentang" onclick="ToggleAbout()">Tentang</a></li>
+                <li><a href="#" class="link" id="layanan" onclick="ToggleLoginOrRegister();">Layanan</a></li>
+            </ul>
+        </div>
+        <div class="nav-button" id="nav-button">
+            // <button class="btn white-btn" id="as_username">Login as Username</button>
+            <button class="btn" onclick="Logout()" id="logout" disabled>Selamat datang!</button>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+
+    <div class="notifications"></div>
+
+    <div class="container-landing" id="about_page" style="display: none;">
+        <div class="content-landing">
+            <div class="div-text">
+                <span>Tentang TJ Jeans Store</span>
+                <h3>Beroperasi secara </h3>
+                <h1>offline dan online</h1>
+                <p>Kontak kami lebih lanjut di berbagai sosial media. <br> 
+                    Seperti whatsapp, line, instagram <br> dan masih banyak lagi.</p>
+                    <!-- <a href="#" class="btn">buy now</a> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container-landing" id="landing_page">
+        <div class="content-landing">
+            <div class="div-text">
+                <span>TJ Jeans Store</span>
+                <h3>Semua Jenis</h3>
+                <h1>Gaya Ada Disini</h1>
+                <p>Kontak kami lebih lanjut di berbagai sosial media. <br> 
+                    Seperti whatsapp, line, instagram <br> dan masih banyak lagi.</p>
+                    <!-- <a href="#" class="btn">buy now</a> -->
+            </div>
+
+            <div class="div-img">
+                <img id="big-img" src="/static/images/jacket1.png" alt="">
+            </div>
+
+            <div class="small-img">
+                <img onclick="myTshirt(this.src)" src="/static/images/jacket1.png" alt="">
+                <img onclick="myTshirt(this.src)" src="/static/images/Jacket2.png" alt="">
+                <img onclick="myTshirt(this.src)" src="/static/images/jacket3.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container" style="display: none;" id="products_page">
+        <header>
+            <div class="title">DAFTAR PRODUK</div>
+            <div class="icon-cart">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+                </svg>
+                <span>0</span>
+            </div>
+        </header>
+        <div class="listProduct">
+
+        </div>
+    </div>
+    <div class="cartTab">
+        <h1>Keranjang Belanja</h1>
+        <div class="listCart">
+            
+        </div>
+        <div class="btn">
+            <button class="close">TUTUP</button>
+            <button class="checkOut">CHECKOUT</button>
+        </div>
+    </div>
+
+    
+ <div class="wrapper" style="display: none;" id="login_register_page">
+    
+
+
+    <div class="form-box">
+        
+
+        <div class="login-container" id="login">
+            <div class="top">
+                <span>Belum punya akun? <a href="#" onclick="register()">Daftar</a></span>
+                <header>Masuk</header>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Username atau Email" id="login_username_email_input">
+                <i class="bx bx-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Password" id="login_password_input">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Masuk" onclick="LogoutAS();">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="login-check">
+                    <label for="login-check"> Ingatkan Saya</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Lupa Password?</a></label>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="register-container" id="register">
+            <div class="top">
+                <span>Sudah punya akun? <a href="#" onclick="login()">Masuk</a></span>
+                <header>Daftar</header>
+            </div>
+            <div class="two-forms">
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Nama Depan" id="register_firstname_input">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Nama Belakang" id="register_lastname_input">
+                    <i class="bx bx-user"></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Email" id="register_email_input">
+                <i class="bx bx-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Password" id="register_password_input">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Daftar" onclick="">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="register-check">
+                    <label for="register-check"> Ingatkan Saya</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Syarat & Ketentuan</a></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>   
+
+<script src="/static/app.js"></script>
+// <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<script>
+localStorage.clear()
+function hasClass(el, className)
+{
+    if (el.classList)
+        return el.classList.contains(className);
+    return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
+}
+
+function addClass(el, className)
+{
+    if (el.classList)
+        el.classList.add(className)
+    else if (!hasClass(el, className))
+        el.className += " " + className;
+}
+
+function removeClass(el, className)
+{
+    if (el.classList)
+        el.classList.remove(className)
+    else if (hasClass(el, className))
+    {
+        var reg = new RegExp('(\\s|^)' + className + '(\\s|$)');
+        el.className = el.className.replace(reg, ' ');
+    }
+}
+
+    function ToggleAbout() {
+    var about_page = document.getElementById("about_page");
+   var display_about_page = getComputedStyle(about_page).display;
+
+   removeClass(document.getElementById("beranda"), "active")
+   removeClass(document.getElementById("produk"), "active")
+   removeClass(document.getElementById("layanan"), "active")
+
+    if (display_about_page == "none") {
+        about_page.style.display = "block";
+        addClass(document.getElementById("tentang"), "active")
+        } else {
+            about_page.style.display = "none";
+            
+            removeClass(document.getElementById("tentang"), "active")
+            // ToggleLoginOrRegister()
+        }
+}
+
+function ToggleLanding() {
+    var landing_page = document.getElementById("landing_page");
+   var display_landing_page = getComputedStyle(landing_page).display;
+
+   removeClass(document.getElementById("produk"), "active")
+   removeClass(document.getElementById("tentang"), "active")
+   removeClass(document.getElementById("layanan"), "active")
+
+    if (display_landing_page == "none") {
+        landing_page.style.display = "block";
+        addClass(document.getElementById("beranda"), "active")
+        } else {
+            landing_page.style.display = "none";
+            
+            removeClass(document.getElementById("beranda"), "active")
+            // ToggleLoginOrRegister()
+        }
+}
+
+function ToggleProducts() {
+    var products_page = document.getElementById("products_page");
+   var display_products_page = getComputedStyle(products_page).display;
+
+   removeClass(document.getElementById("beranda"), "active")
+   removeClass(document.getElementById("tentang"), "active")
+   removeClass(document.getElementById("layanan"), "active")
+
+    if (display_products_page == "none") {
+        products_page.style.display = "block";
+        addClass(document.getElementById("produk"), "active")
+        } else {
+            products_page.style.display = "none";
+            
+            removeClass(document.getElementById("produk"), "active")
+            // ToggleLoginOrRegister()
+        }
+}
+
+
+function ToggleLoginOrRegister() {
+    var login_register_page = document.getElementById("login_register_page");
+   var display_login_register_page = getComputedStyle(login_register_page).display;
+   var login_register_btn = document.getElementById("nav-button");
+
+   removeClass(document.getElementById("beranda"), "active")
+   removeClass(document.getElementById("tentang"), "active")
+   removeClass(document.getElementById("produk"), "active")
+
+    if (display_login_register_page == "none") {
+        login_register_page.style.display = "flex";
+        addClass(document.getElementById("layanan"), "active")
+        } else {
+            login_register_page.style.display = "none";
+            removeClass(document.getElementById("layanan"), "active")
+        }
+}
+
+// function LogoutAS() {
+//     var logout_as = document.getElementById('logout')
+//     var opacity_logout_as = getComputedStyle(logout_as).opacity;
+//     var nav_menu_layanan = document.querySelector('#layanan')
+
+//     if (localStorage.getItem('username') != '') {
+//         ToggleLoginOrRegister()
+//         nav_menu_layanan.style.opacity = 0;
+//         logout_as.style.opacity = 1;
+//         logout_as.innerText = `Logout as ${localStorage.getItem('username')}`;
+//     } else {
+//         nav_menu_layanan.style.opacity = 1;
+//         logout_as.style.opacity = 0;
+//         logout_as.innerText = `Logout as null`;
+//     }
+// }
+
+</script>
+
+<script>
+let bigImage = document.getElementById('big-img');
+var a = document.getElementById("loginBtn");
+    var b = document.getElementById("registerBtn");
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+    function myTshirt(shirt){
+        bigImage.src = shirt
+    }
+   
+   function myMenuFunction() {
+    var i = document.getElementById("navMenu");
+
+    if(i.className === "nav-menu") {
+        i.className += " responsive";
+    } else {
+        i.className = "nav-menu";
+    }
+   }
+
+   
+
+    function login() {
+        x.style.left = "4px";
+        y.style.right = "-520px";
+        // a.className += " white-btn";
+        // b.className = "btn";
+        x.style.opacity = 1;
+        y.style.opacity = 0;
+    }
+
+    // let hide_user = document.querySelector('#nav-button')
+    // let fill_user = document.querySelector('#as_username')
+    // let nav_menu_layanan = document.querySelector('#layanan')
+    // hide_user.style.opacity = 0;
+        
+    // fill_user.innerHTML = `Login as Username`
+            
+    // nav_menu_layanan.style.opacity = 1;
+    
+
+    function register() {
+        x.style.left = "-510px";
+        y.style.right = "5px";
+        // a.className = "btn";
+        // b.className += " white-btn";
+        x.style.opacity = 0;
+        y.style.opacity = 1;
+    }
+ 
+</script>
+
+</body>
+</html>
+}
+
