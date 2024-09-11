@@ -39,5 +39,7 @@ To Do :
 
 10. Use cache liftbridge/nats
 
+11. Use callback for every payment so that 'status' order state 'pending' changed lively 'paid', we need production mode api from xendit/Midtrans for this service
+
 
 
