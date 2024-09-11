@@ -33,5 +33,7 @@ To Do :
 
 9. A lack of admin to manage even CRUD so it's self seed application.
 
+10. Use cache liftbridge/nats
+
 
 
