@@ -10,7 +10,9 @@ It has features :
 
 4. JWT Token accross API Endpoint for securely
 
-5. Payment Gateway ( Xendit & Midtrans able ).
+5. Payment Gateway ( Xendit & Midtrans able )
+
+6. Database Migration
 
 
 To Do :
