@@ -14,6 +14,8 @@ It has features :
 
 6. Database Migration
 
+7. Validation
+
 
 To Do :
 
