@@ -10,7 +10,7 @@ It has features :
 
 4. JWT Token accross API Endpoint for securely
 
-5. Payment Gateway ( Xendit & Midtrans able )
+5. Payment Gateway ( Xendit & Midtrans able ).
 
 
 To Do :
@@ -25,13 +25,13 @@ To Do :
 
 5. Use secure environtment variable d with Hashicorp Vault instead for production 
 
-6. CI/CD, Docker, K8s
+6. CI/CD, Docker, K8s, Github Workflows/Action, any-ignored file should be it
 
 7. Accounting Details about every products has been sold so that in future there's structure how much profit
 
 8. Frontend need to be separated-like ( for example, don't make it combined together, split instead only index.html -> using templ+htmx )
 
-9. A lack of admin to manage even CRUD so it's self seed application
+9. A lack of admin to manage even CRUD so it's self seed application.
 
 
 
