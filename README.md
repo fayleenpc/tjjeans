@@ -12,19 +12,25 @@ It has features :
 
 5. Payment Gateway ( Xendit & Midtrans able )
 
-6.
-
 
 To Do :
 
 1. Implement with Autocert https for production
+
 2. Verify Email with real email using SMTP/Gmail-like verification code
+
 3. Build Microservices between types.go
+
 4. Monitor any services with Prometheus/Jaeger UI combined with Grafana
+
 5. Use secure environtment variable d with Hashicorp Vault instead for production 
+
 6. CI/CD, Docker, K8s
+
 7. Accounting Details about every products has been sold so that in future there's structure how much profit
+
 8. Frontend need to be separated-like ( for example, don't make it combined together, split instead only index.html -> using templ+htmx )
+
 9. A lack of admin to manage even CRUD so it's self seed application
 
 
