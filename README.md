@@ -1,4 +1,4 @@
-TJ Jeans E-Commerce ( Simple E Commerce )
+TJ Jeans E-Commerce ( Simple E Commerce, for public purposes )
 
 It has features :
 
